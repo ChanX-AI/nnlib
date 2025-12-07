@@ -5,7 +5,5 @@ class SGD:
         self.lr = lr
 
     def update(self, params):
-        for param, grad in params:
-            if grad is None:
-                raise ValueError("Error Updation")
+        for param, grad in params:
             param -= self.lr * grad
