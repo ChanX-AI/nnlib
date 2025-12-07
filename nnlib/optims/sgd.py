@@ -1,0 +1,11 @@
+import numpy as np
+
+class SGD:
+    def __init__(self,lr):
+        self.lr = lr
+
+    def update(self, params):
+        for param, grad in params:
+            if grad is None:
+                raise ValueError("Error Updation")
+            param -= self.lr * grad
